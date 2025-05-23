@@ -24,16 +24,16 @@ raster_layers = {
 # Display layers with high-quality settings
 for label, (file_path, cmap) in raster_layers.items():
     if st.sidebar.checkbox(f"Show {label}", value=("2015" in label or "BAU" in label)):
-        if os.path.exists(file_path):
-            m.add_raster(
-                file_path,
-                layer_name=label,
-                colormap=cmap,
-                rescale=True,
-                vmin=1,
-                vmax=255,
-                nodata=0
-            )
+        m.add_raster(
+            file_path,
+            layer_name=label,
+            colormap=cmap,
+            rescale=True,
+            vmin=1,
+            vmax=255,
+            nodata=0
+        )
+
         else:
             st.warning(f"File not found: {file_path}")
 
@@ -47,4 +47,3 @@ else:
 # Enable layer control and display map
 m.add_layer_control()
 m.to_streamlit(width=1200, height=700)
-
