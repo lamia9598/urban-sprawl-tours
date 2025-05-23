@@ -2,3 +2,8 @@ streamlit
 leafmap
 geopandas
 rasterio
+numpy
+matplotlib
+shapely
+pyproj
+fiona
