@@ -11,12 +11,13 @@ st.sidebar.title("Layer Controls")
 m = leafmap.Map(center=[47.39, 0.688], zoom=11, esri=True)
 
 
+
 # Define raster layers (projected to EPSG:4326)
 raster_layers = {
-    "Urban cover 2015 (Blue)": ("urban_cover_2015_clipped.tif", "Blues"),
-    "Urban cover 2040 BAU (Red)": ("urban_cover_2040_bau_clipped.tif", "Reds"),
-    "Urban cover 2040 Compact (Green)": ("urban_cover_2040_compact_clipped.tif", "Greens"),
-    "Soil Vulnerability (Magma)": ("soil_vulnerability_clipped.tif", "magma")
+    "Urban cover 2015 (Blue)": ("https://huggingface.co/datasets/lamia9598/app/blob/main/urban_cover_2015_cog.tif", "Blues"),
+    "Urban cover 2040 BAU (Red)": ("https://huggingface.co/datasets/lamia9598/app/blob/main/urban_cover_2040_bau_cog.tif", "Reds"),
+    "Urban cover 2040 Compact (Green)": ("https://huggingface.co/datasets/lamia9598/app/blob/main/urban_cover_2040_compact_cog.tif", "Greens"),
+    "Soil Vulnerability (Magma)": ("https://huggingface.co/datasets/lamia9598/app/blob/main/soil_vulnerability_cog.tif", "magma")
 }
 
 # Display layers with high-quality settings
