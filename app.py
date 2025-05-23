@@ -34,9 +34,9 @@ for label, (file_path, cmap) in raster_layers.items():
             nodata=0
         )
 
-
 # Add vector overlay (boundary shapefile)
-vector_file = "scotclipped1_4326.shp"
+vector_file = "scotclipped1_4326.geojson"
+
 if os.path.exists(vector_file):
     m.add_vector(vector_file, layer_name="Study Area", shown=True)
 else:
