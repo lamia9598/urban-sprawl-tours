@@ -34,8 +34,6 @@ for label, (file_path, cmap) in raster_layers.items():
             nodata=0
         )
 
-        else:
-            st.warning(f"File not found: {file_path}")
 
 # Add vector overlay (boundary shapefile)
 vector_file = "scotclipped1_4326.shp"
